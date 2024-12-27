@@ -41,7 +41,7 @@ public class UserResource {
         return ResponseEntity.ok().body(obj.getPosts());
     }
 
-    @RequestMapping(value = "/{id}", method= RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}/posts", method= RequestMethod.DELETE)
     public ResponseEntity<Void> delete(@PathVariable String id){
         service.delete(id);
         return ResponseEntity.noContent().build();
